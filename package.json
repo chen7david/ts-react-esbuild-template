@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec \"npm run build\" --ignore public --ext tsx",
-    "build": "esbuild src/main.tsx --bundle --minify --sourcemap --outfile=public/bundle.js"
+    "build": "esbuild src/main.tsx --bundle --minify --sourcemap --outfile=public/bundle.js",
+    "format": "prettier --write \"src/**/*.+(js|jsx|ts|tsx)\""
   },
   "repository": {
     "type": "git",
