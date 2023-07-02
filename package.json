@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --exec \"npm run build\" --ignore public --ext tsx",
+    "build": "esbuild src/main.tsx --bundle --minify --sourcemap --outfile=public/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "esbuild": "^0.18.11",
+    "nodemon": "^2.0.22",
     "prettier": "^2.8.8",
     "typescript": "^5.1.6"
   }
